@@ -1,19 +1,25 @@
 import React from "react"
-import robotsJSON from "./robots.json"
-import CardComponent from './CardComponent'
-import { Container } from 'reactstrap'
+import Card from "./Card"
 
-const Cardlist = () => {
-    const cardComp = robotsJSON.map((user, i) => {
-        return <CardComponent id={robotsJSON[i].id} name={robotsJSON[i].name} email={robotsJSON[i].email} />
-    })
+
+const Cardlist = ({ robots }) => {
+
 
     return (
-        <Container>
-            <div className="row col-sm-12">
-                {cardComp}
-            </div>
-        </Container>
+        <div>
+            {
+                robots.map((user, i) => {
+                    return (
+                        <Card
+                            key={i}
+                            id={robots[i].id}
+                            name={robots[i].name}
+                            email={robots[i].email}
+                        />
+                    )
+                })
+            }
+        </div>
     )
 }
 
