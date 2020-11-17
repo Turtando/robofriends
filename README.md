@@ -42,7 +42,7 @@ Christopher Turton
 
 This program contains 0 tests.
 
-# Test Run
+# Demo Run
 
 ![](./public/robofriends.gif)
 
